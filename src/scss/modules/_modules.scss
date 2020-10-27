@@ -150,6 +150,13 @@ body {
       height: 100%;
       transform: scale(1);
       transition: .3s;
+      border: solid 1px transparent;
+      &::after {
+        box-sizing: content-box !important;
+      }
+      &::before {
+        box-sizing: content-box !important;
+      }
       &:focus {
         outline: -webkit-focus-ring-color auto 0px;
       }
@@ -176,4 +183,7 @@ body {
       font-size: 15px;;
     }
   }
+}
+*, ::after, ::before {
+  box-sizing: content-box;
 }
